@@ -1,0 +1,24 @@
+# Simple StoreKit Wrapper
+
+This is my stab at making a StoreKit wrapper. StoreKit has been around awhile but it has had quite a lot of changes since its inception, so there are many dated codes and tutorial all over the web. I know there already are a few of them, namely [MKStoreKit](https://github.com/MugunthKumar/MKStoreKit) and [RMStore](https://github.com/robotmedia/RMStore). Both looked great, however neither of them works by just drop the codes in, change a few codes, and run. MKStoreKit hasn't been updated for over a year and RMStore should've worked for me but it didn't.
+
+The codes are adapted from a [dated tutorial](http://troybrant.net/blog/2010/01/in-app-purchases-a-full-walkthrough/) and the server side validation is from MKStoreKit with minor changes.
+
+## Requirements and Usage
+
+1. iOS 7.
+2. StoreKit.framework.
+3. Drop in all .h/.m files to your project.
+4. Upload .php to your server.
+5. Apply the changes you need on `SRIapManager.h` and `SRIapManager.m`.
+6. Call `[SRIapManager shared];` in `application:didFinishLaunchingWithOptions:`.
+7. Done. Just call the appropriate methods to purchase / restore purchases.
+
+## Limitation
+
+1. It's only tested against sandbox server (my app that uses this still needs a bit before submition).
+2. It support non-consumable in-app purchase. I'll add more as I use more of in-app purchase.
+
+## License
+
+This project is licensed under [DBAD License](http://www.dbad-license.org).
